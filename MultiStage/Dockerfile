@@ -7,7 +7,7 @@ COPY MultiStage.csproj .
 RUN dotnet restore
 COPY . .
 # Build and publish a release
-RUN dotnet build "MultiStage.csproj" -c Release -o /App/build
+RUN dotnet build "MultiStage.csproj" -c Release -o /App
 
 RUN dotnet publish -c Release -o /App
 
